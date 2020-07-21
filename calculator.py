@@ -13,6 +13,8 @@ with open("step_2.txt", "r") as f:
             end_result += result
         elif (input_arr[1] == '/'):
             result = int(input_arr[2]) / int(input_arr[3])
+        elif (input_arr[1] == '^'):
+            result = pow(int(input_arr[2]), int(input_arr[3]))
             end_result += result
         elif (input_arr[1] == '%'):
             result = int(input_arr[2]) % int(input_arr[3])
@@ -51,5 +53,7 @@ while True:
     elif (input_arr[2] == '%'):
         result = int(int(input_arr[3]) % int(input_arr[4]))
         idx = int(result) - 1
-
+    elif (input_arr[2] == '^'):
+        result = pow(int(input_arr[2]), int(input_arr[3]))
+        idx = int(result) - 1
 print("Step3 IDX: ", idx, " Value ", lines[idx])
